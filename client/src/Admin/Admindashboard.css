@@ -1,0 +1,181 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Admin Dashboard */
+.admin-dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: #f8f9fa; /* Light color for the sidebar */
+    color: #343a40; /* Darker text color */
+    padding: 20px;
+    position: fixed; /* Fixed sidebar for better navigation */
+    height: 100%;
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    border-right: 1px solid #dee2e6; /* Light border for separation */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    border-radius: 0 5px 5px 0; /* Rounded corners on the right side */
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Button Styles */
+.sidebar button {
+    background-color: #e9ecef; /* Light button color */
+    color: #343a40; /* Dark text for buttons */
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners for buttons */
+}
+
+.sidebar button:hover {
+    background-color: #ced4da; /* Slightly darker on hover */
+}
+
+/* Content */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    margin-left: 270px; /* Adjust margin-left to move content slightly right */
+    border-radius: 5px; /* Rounded corners for content */
+}
+
+/* Header and Titles */
+h1, h2, h3 {
+    color: #343a40; /* Darker color for headers */
+}
+
+/* Employee and Asset List */
+ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+
+li {
+    background-color: #f1f1f1; /* Light background for list items */
+    padding: 10px;
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li button {
+    background-color: #dc3545; /* Danger color for delete button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+li button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+/* Form Styles */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    border-color: #1abc9c; /* Change border color on focus */
+    outline: none; /* Remove outline */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Primary button color */
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3; /* Button hover color */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px; /* Space above table */
+}
+
+th, td {
+    padding: 10px; /* Cell padding */
+    text-align: left; /* Left-align text */
+    border: 1px solid #ddd; /* Cell border */
+    border-radius: 5px; /* Rounded corners for cells */
+}
+
+th {
+    background-color: #007bff; /* Table header color */
+    color: white; /* Header text color */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Even row background color */
+}
+
+tr:hover {
+    background-color: #e8f5e9; /* Row hover color */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .admin-dashboard {
+        flex-direction: column; /* Stack layout on small screens */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width sidebar */
+        padding: 10px; /* Adjust padding */
+        position: relative; /* Allow scrolling within content */
+    }
+
+    .content {
+        padding: 10px; /* Reduce content padding */
+        margin-left: 0; /* Remove sidebar margin */
+    }
+
+    button {
+        padding: 8px; /* Adjust button padding */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        width: calc(100% - 20px); /* Adjust input width */
+    }
+}
